@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 
-export const RecipeInfo = ({recipe}) => {
-    return(
+export const RecipeInfo = ({ recipe }) => {
+    return (
         <article>
             <h2>{recipe.name}</h2>
             <p>{recipe.time}</p>
@@ -12,3 +13,13 @@ export const RecipeInfo = ({recipe}) => {
     )
 }
 
+RecipeInfo.propTypes = {
+    recipe: PropTypes.shape({
+        name: PropTypes.string,
+        time: PropTypes.string,
+        servings: PropTypes.number,
+        calories: PropTypes.number,
+        difficulty: PropTypes.number,
+        image: PropTypes.string
+    })
+}
