@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import styles from "./ResipeInfo.module.css"
+
 
 export const RecipeInfo = ({ recipe }) => {
     return (
-        <article className={styles.article}>
+        <article >
             <h2>{recipe.name}</h2>
             <p>{recipe.time}</p>
             <p>{recipe.servings}</p>
